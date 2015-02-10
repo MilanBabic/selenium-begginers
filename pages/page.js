@@ -5,6 +5,9 @@ var Page  = {
         this.bd.get(this.url);
     },
 
+    /*\ Navigation link for home page is not consistent on all pages so it can't be located with the same linkText().
+    |*| Since "isElementPresent(by.linkText('Home Page'))" doesn't return boolean but a 'promise', it must be handled with the "then()" function and in this case passed on as 'value'
+    \*/
     goToHome: function () {
         this.bd.isElementPresent(by.linkText('Home Page')).then(function (value) {
             if (value) {
