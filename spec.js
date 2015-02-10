@@ -38,6 +38,7 @@ describe('Selenium: Begginers Guide', function () {
 
     it('should verify chapter 2 elements', function () {
         homePage.goToChapter2();
-        chapter2.verifyNamedElement('but2');
+        chapter2.verifyElementByName('but2');
+        chapter2.verifyButtonByValue();
     });
 });
